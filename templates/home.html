@@ -1,13 +1,9 @@
-<html>
-    <head>
-        <Title>Home</Title>
-    </head>
-    <body>
-        <h1>My Goals</h1>
-        <ul>
-            {% for goal in goals %}
-                <li>{{ goal.name }} - {% if goal.completed %}Completed{% else %}In progress{% endif %}</li>
-            {% endfor %}
+{% extends 'base.html' %}
+{% block content %}
+    <h1>My Goals</h1>
+    <ul>
+        {% for goal in goals %}
+            <li>{{ goal.name }} - {% if goal.completed %}Completed{% else %}In progress{% endif %}</li>
+        {% endfor %}
         </ul>
-    </body>
-</html>
+{% endblock %}
